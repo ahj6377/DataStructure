@@ -347,7 +347,7 @@ int SortedLinkedList<T>::Replace(T& data)
 	}
 
 	if (found) //찾았을 경우
-	{	m_nLength--;
+	{	
 		return 1;
 		
 	}
