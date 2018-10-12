@@ -287,8 +287,10 @@ int SortedLinkedList<T>::Delete(T& data)
 			found = true;	//찾았으므로 found = true
 			if (pre == NULL)	//찾은 항목이 첫번째 원소일경우
 			{	
+				NodeType<T>* temp = m_pCurPointer->next;		//첫번째 원소의 다음원소를 저장할 임시 포인터선언
 				delete m_pList;	//첫원소를 삭제한다.
-				m_pList = m_pCurPointer->next; //찾은 항목이 첫 항목일경우 다음 원소를 첫번째 원소로 한다.
+				
+				m_pList = temp; //찾은 항목이 첫 항목일경우 다음 원소를 첫번째 원소로 한다.
 			}
 			else
 			{
